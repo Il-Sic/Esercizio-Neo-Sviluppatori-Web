@@ -84,4 +84,5 @@ public class BatchLoader
             System.err.println("Errore durante il caricamento di prenotazione: " + e.getMessage());
         }
     }
+
 }
