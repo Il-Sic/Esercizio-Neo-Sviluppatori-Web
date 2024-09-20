@@ -18,7 +18,6 @@ public class BatchLoader
         {
             connection.setAutoCommit(false);
 
-
             loadPrenotante(connection, "src/main/resources/prenotante.csv");
 
             loadGelato(connection, "src/main/resources/gelato.csv");
