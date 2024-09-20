@@ -25,12 +25,15 @@ public class BatchLoader
             loadPrenotazione(connection, "src/main/resources/prenotazioni.csv");
 
             connection.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
 
-    private static void loadPrenotante(Connection connection, String filePath) {
+    private static void loadPrenotante(Connection connection, String filePath)
+    {
         String sql = "INSERT INTO prenotante (id, nome) VALUES (?, ?)";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath));
              PreparedStatement stmt = connection.prepareStatement(sql)) {
@@ -43,18 +46,23 @@ public class BatchLoader
                 stmt.addBatch();
             }
             stmt.executeBatch();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.err.println("Errore durante il caricamento di prenotante: " + e.getMessage());
         }
     }
 
-    private static void loadGelato(Connection connection, String filePath) {
+    private static void loadGelato(Connection connection, String filePath)
+    {
         String sql = "INSERT INTO gelato (id, nome, descrizione) VALUES (?, ?, ?)";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath));
-             PreparedStatement stmt = connection.prepareStatement(sql)) {
+             PreparedStatement stmt = connection.prepareStatement(sql))
+        {
 
             String line = br.readLine();
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null)
+            {
                 String[] fields = line.split(",");
                 stmt.setInt(1, Integer.parseInt(fields[0]));
                 stmt.setString(2, fields[1]);
@@ -62,27 +70,32 @@ public class BatchLoader
                 stmt.addBatch();
             }
             stmt.executeBatch();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.err.println("Errore durante il caricamento di gelato: " + e.getMessage());
         }
     }
 
-    private static void loadPrenotazione(Connection connection, String filePath) {
+    private static void loadPrenotazione(Connection connection, String filePath)
+    {
         String sql = "INSERT INTO prenotazione (id_prenotante, id_gelato) VALUES (?, ?)";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath));
-             PreparedStatement stmt = connection.prepareStatement(sql)) {
-
+             PreparedStatement stmt = connection.prepareStatement(sql))
+        {
             String line = br.readLine();
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null)
+            {
                 String[] fields = line.split(",");
                 stmt.setInt(1, Integer.parseInt(fields[0]));
                 stmt.setInt(2, Integer.parseInt(fields[1]));
                 stmt.addBatch();
             }
             stmt.executeBatch();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.err.println("Errore durante il caricamento di prenotazione: " + e.getMessage());
         }
     }
-
 }
