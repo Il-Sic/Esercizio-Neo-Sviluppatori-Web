@@ -35,9 +35,9 @@ VALUES
 INSERT INTO gelato
     (id, nome, descrizione)
 VALUES
-    (1, 'cioccolato', 'cioccolato fatto con le nostre mani'),
-    (2, 'pistacchio', 'pistacchio di bronte'),
-    (3, 'nocciola', 'nocciola buonissima');
+    (1, 'Fantasioso', 'E che te lo dico a fare? Un arcobaleno di sapori'),
+    (2, 'Immaginario', 'Che domande...immagina il gusto e sentirai proprio quello'),
+    (3, 'Piccantoso', 'Se l inferno è dalla tua parte allora apprezzerai questo gusto');
 
 INSERT INTO prenotazione
     (id_prenotante, id_gelato)
