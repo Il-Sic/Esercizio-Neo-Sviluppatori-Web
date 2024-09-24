@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 
 public class BatchLoader
 {
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/gelateria";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USER = "user";
     private static final String PASSWORD = "password";
 
