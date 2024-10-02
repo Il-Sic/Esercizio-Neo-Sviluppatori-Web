@@ -18,14 +18,24 @@ import javax.annotation.Generated;
  * Prenotazione
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:27:07.715890+02:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:23:05.521915+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
 public class Prenotazione {
 
-  @JsonProperty("id_prenotante")
   private Integer idPrenotante;
 
-  @JsonProperty("id_gelato")
   private Integer idGelato;
+
+  public Prenotazione() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public Prenotazione(Integer idPrenotante, Integer idGelato) {
+    this.idPrenotante = idPrenotante;
+    this.idGelato = idGelato;
+  }
 
   public Prenotazione idPrenotante(Integer idPrenotante) {
     this.idPrenotante = idPrenotante;
@@ -35,9 +45,10 @@ public class Prenotazione {
   /**
    * ID del prenotante
    * @return idPrenotante
-  */
+   */
   @NotNull 
-  @Schema(name = "id_prenotante", description = "ID del prenotante", required = true)
+  @Schema(name = "id_prenotante", description = "ID del prenotante", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("id_prenotante")
   public Integer getIdPrenotante() {
     return idPrenotante;
   }
@@ -54,9 +65,10 @@ public class Prenotazione {
   /**
    * ID del gelato
    * @return idGelato
-  */
+   */
   @NotNull 
-  @Schema(name = "id_gelato", description = "ID del gelato", required = true)
+  @Schema(name = "id_gelato", description = "ID del gelato", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("id_gelato")
   public Integer getIdGelato() {
     return idGelato;
   }

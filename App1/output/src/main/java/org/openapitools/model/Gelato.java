@@ -18,17 +18,27 @@ import javax.annotation.Generated;
  * Gelato
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:27:07.715890+02:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:23:05.521915+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
 public class Gelato {
 
-  @JsonProperty("id")
   private Integer id;
 
-  @JsonProperty("nome")
   private String nome;
 
-  @JsonProperty("descrizione")
   private String descrizione;
+
+  public Gelato() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public Gelato(Integer id, String nome, String descrizione) {
+    this.id = id;
+    this.nome = nome;
+    this.descrizione = descrizione;
+  }
 
   public Gelato id(Integer id) {
     this.id = id;
@@ -38,9 +48,10 @@ public class Gelato {
   /**
    * ID univoco del gelato
    * @return id
-  */
+   */
   @NotNull 
-  @Schema(name = "id", description = "ID univoco del gelato", required = true)
+  @Schema(name = "id", description = "ID univoco del gelato", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("id")
   public Integer getId() {
     return id;
   }
@@ -57,9 +68,10 @@ public class Gelato {
   /**
    * Nome del gusto di gelato
    * @return nome
-  */
+   */
   @NotNull 
-  @Schema(name = "nome", description = "Nome del gusto di gelato", required = true)
+  @Schema(name = "nome", description = "Nome del gusto di gelato", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("nome")
   public String getNome() {
     return nome;
   }
@@ -76,9 +88,10 @@ public class Gelato {
   /**
    * Descrizione del gelato
    * @return descrizione
-  */
+   */
   @NotNull 
-  @Schema(name = "descrizione", example = "Gelato al cioccolato realizzato con ingredienti di alta qualità.", description = "Descrizione del gelato", required = true)
+  @Schema(name = "descrizione", example = "Gelato al cioccolato realizzato con ingredienti di alta qualità.", description = "Descrizione del gelato", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("descrizione")
   public String getDescrizione() {
     return descrizione;
   }

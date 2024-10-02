@@ -15,29 +15,40 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * Prenotazione
+ * Prenotante
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:27:07.715890+02:00[Europe/Rome]")
-public class Prenotazione {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:23:05.521915+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
+public class Prenotante {
 
-  @JsonProperty("id_prenotante")
   private Integer idPrenotante;
 
-  @JsonProperty("id_gelato")
-  private Integer idGelato;
+  private String nome;
 
-  public Prenotazione idPrenotante(Integer idPrenotante) {
+  public Prenotante() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public Prenotante(Integer idPrenotante, String nome) {
+    this.idPrenotante = idPrenotante;
+    this.nome = nome;
+  }
+
+  public Prenotante idPrenotante(Integer idPrenotante) {
     this.idPrenotante = idPrenotante;
     return this;
   }
 
   /**
-   * ID del prenotante
+   * ID prenotante
    * @return idPrenotante
-  */
+   */
   @NotNull 
-  @Schema(name = "id_prenotante", description = "ID del prenotante", required = true)
+  @Schema(name = "id_prenotante", description = "ID prenotante", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("id_prenotante")
   public Integer getIdPrenotante() {
     return idPrenotante;
   }
@@ -46,23 +57,24 @@ public class Prenotazione {
     this.idPrenotante = idPrenotante;
   }
 
-  public Prenotazione idGelato(Integer idGelato) {
-    this.idGelato = idGelato;
+  public Prenotante nome(String nome) {
+    this.nome = nome;
     return this;
   }
 
   /**
-   * ID del gelato
-   * @return idGelato
-  */
+   * Nome del prenotante
+   * @return nome
+   */
   @NotNull 
-  @Schema(name = "id_gelato", description = "ID del gelato", required = true)
-  public Integer getIdGelato() {
-    return idGelato;
+  @Schema(name = "nome", description = "Nome del prenotante", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
   }
 
-  public void setIdGelato(Integer idGelato) {
-    this.idGelato = idGelato;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   @Override
@@ -73,22 +85,22 @@ public class Prenotazione {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Prenotazione prenotazione = (Prenotazione) o;
-    return Objects.equals(this.idPrenotante, prenotazione.idPrenotante) &&
-        Objects.equals(this.idGelato, prenotazione.idGelato);
+    Prenotante prenotante = (Prenotante) o;
+    return Objects.equals(this.idPrenotante, prenotante.idPrenotante) &&
+        Objects.equals(this.nome, prenotante.nome);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPrenotante, idGelato);
+    return Objects.hash(idPrenotante, nome);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Prenotazione {\n");
+    sb.append("class Prenotante {\n");
     sb.append("    idPrenotante: ").append(toIndentedString(idPrenotante)).append("\n");
-    sb.append("    idGelato: ").append(toIndentedString(idGelato)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("}");
     return sb.toString();
   }

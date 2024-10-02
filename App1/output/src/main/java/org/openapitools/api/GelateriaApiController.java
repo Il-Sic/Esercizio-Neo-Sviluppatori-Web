@@ -28,8 +28,9 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:27:07.715890+02:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T13:23:05.521915+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
 @Controller
+@RequestMapping("${openapi.app1Gelateria.base-path:}")
 public class GelateriaApiController implements GelateriaApi {
 
     private final NativeWebRequest request;
