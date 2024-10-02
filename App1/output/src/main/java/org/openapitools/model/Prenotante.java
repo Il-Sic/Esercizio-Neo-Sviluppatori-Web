@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * Prenotante
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T12:45:11.821636+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-10-02T12:47:40.334055+02:00[Europe/Rome]", comments = "Generator version: 7.8.0")
 public class Prenotante {
 
   private Integer idPrenotante;
