@@ -8,7 +8,7 @@ servers:
   - url: http://localhost:8080
 
 paths:
-  /api/gelati:
+  /gelateria/gelati:
     get:
       summary: Ottieni una lista di gelati
       responses:
@@ -38,7 +38,7 @@ paths:
         '500':
           description: Errore interno del server
 
-  /api/gelati/{id}:
+  /gelateria/gelati/{id}:
     get:
       summary: Ottieni un singolo gelato tramite ID
       parameters:
@@ -102,7 +102,7 @@ paths:
         '500':
           description: Errore interno del server
 
-  /api/prenotante:
+  /gelateria/prenotante:
     get:
       summary: Lista delle persone che prenotano il gelato
       responses:
@@ -134,7 +134,7 @@ paths:
         '500':
           description: Errore interno del server
 
-  /api/prenotante/{id_prenotante}:
+  /gelateria/prenotante/{id_prenotante}:
     get:
       summary: Cerca prenotante per ID
       parameters:
@@ -198,7 +198,7 @@ paths:
         '500':
           description: Errore interno del server
 
-  /api/prenota:
+  /gelateria/prenota:
     get:
       summary: Ottieni una lista di prenotazioni
       responses:
@@ -228,7 +228,7 @@ paths:
         '500':
           description: Errore interno del server
 
-  /api/prenota/{id_prenotante}/{id_gelato}:
+  /gelateria/prenota/{id_prenotante}/{id_gelato}:
     get:
       summary: Cerca prenotazione per ID prenotante e ID gelato
       parameters:
